@@ -1,0 +1,15 @@
+﻿@model companyweb.Models.Article
+@{
+    ViewBag.Title = Model.Title;
+    Layout = "~/Areas/UI/Views/Shared/_Layout.cshtml";
+}
+
+<div style="width:960px; margin:0px auto; text-align:center; margin-top:25px; margin-bottom:25px;">
+    <h4><strong>@Model.Title</strong></h4>
+    <div style="text-align:center; font-size:13px; color:lightgray;border-top:1px solid #ededed;">
+        <sup>编辑时间: </sup>
+        <sup>@Model.Publishtime.ToString("yyyy-MM-dd HH 时")</sup>
+    </div>
+</div>
+
+<div class="container">@Html.Raw(Model.Contenteditor)</div>

@@ -1,0 +1,29 @@
+﻿@using companyweb.Controllers
+@{
+        ViewBag.Title = "Articles";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+@section styles{    
+    <link type="text/css" href="@Url.Content("~/Content/articlelist.css")" rel="stylesheet" />
+}
+
+@section scripts{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Managerment/articlelist.js")"></script>
+}
+
+<div style="margin-top:25px;"></div>
+<input type="hidden" id="articlecategory" name="articlecategory" value="@ViewData[ManagermentController.ARTICLECATENAME]" />
+<input type="button" id="contentbtnadd" name="contentbtnadd" value="添加新内容" />
+<input type="button" id="contentbtndel" name="contentbtndel" value="删除选中项" />
+<hr />
+<div id="listcontrainer"></div>
+<div id="listpagercontrainer">
+    <div id="listcontentmore">
+        <sub>获取更多</sub>
+        <sub style="margin-left:15px;">>>></sub>
+    </div>
+    <div id="listcontentno">
+        <sub>没有更多了</sub>
+    </div>
+</div>

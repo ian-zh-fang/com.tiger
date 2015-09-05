@@ -1,0 +1,47 @@
+﻿@using companyweb.Models
+@{
+    ViewBag.Title = "产品及服务";
+    Layout = "~/Areas/UI/Views/Shared/_Layout.cshtml";
+}
+
+@section styles{
+    <link href="@Url.Content("~/Content/articlelist.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/UI/css/products.css")" rel="stylesheet" />
+}
+
+@section scripts{
+    <script src="@Url.Content("~/Areas/UI/js/home/products.js")"></script>
+}
+
+@Html.Hidden("category", Article.PRODUCTCATEGORY)
+
+<div class="container">
+    <div class="sixteen columns page-title">
+        <div class="eight columns alpha">
+            <h3> <span><strong>产品及服务</strong></span> </h3>
+        </div>
+        <div class="eight columns omega">
+            <nav class="breadcrumbs">
+                <ul>
+                    <li>您的位置:</li>
+                    <li><a href="@Url.Action("Index")">主页</a></li>
+                    <li>产品及服务</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<div id="contentlistcontainer" class="container"></div>
+
+<div id="listpagercontrainer">
+    <div id="listcontentmore">
+        <sub>获取更多</sub>
+        <sub style="margin-left:15px;">>>></sub>
+    </div>
+    <div id="listcontentno">
+        <sub>没有更多了</sub>
+    </div>
+</div>
+

@@ -1,0 +1,98 @@
+﻿body {
+}
+
+input,select,label{
+    cursor:pointer;
+}
+
+    input[type=text] {
+        cursor:text;
+    }
+
+div#formhead {
+    font-size:14px;
+}
+
+/*div#formhead div{
+    margin-bottom:10px;
+    margin-left:10px;
+}*/
+
+div#formhead sub{
+    font-size:16px;
+}
+
+    div#formhead input[type=text], select {
+        margin-left:10px;
+    }
+
+    div#formhead input[type=text] {
+        width:73%;
+    }
+
+    div#formhead select {
+        width:23%;
+        margin-right:10px;
+    }
+
+    div#formhead input[type=button] {
+        margin-top:0px;
+        vertical-align:central;
+        text-align:center;
+        cursor:pointer;
+        font-size:11px;
+        background-color:cornflowerblue;
+        border-color:cornflowerblue;
+        color:white;
+    }
+
+div#formfooter {
+    height:35px;
+    line-height:35px;
+    text-align:left;
+    vertical-align:central;
+    border-top:1px solid #E8E9F7;
+}
+
+div#uploadfooter {
+    height:35px;
+    line-height:35px;
+    text-align:right;
+    vertical-align:central;
+    border-top:1px solid #E8E9F7;
+}
+
+    div#uploadfooter input[type=button] {
+
+        margin-top:8px;
+        vertical-align:central;
+        text-align:center;
+        cursor:pointer;
+        font-size:14px;
+    }
+
+input[type=button][id=btnok], input[type=submit][id=formbtnsubmit], input[type=button][id=mediabtnok] {
+    background-color:cornflowerblue;
+    border-color:cornflowerblue;
+    color:white;
+}
+
+input[type=button][id=formbtncancel], input[type=button][id=btncancel], input[type=button][id=mediabtncancel] {
+    background-color:lightgray;
+    border-color:lightgray;
+}
+
+div.fileselectcontrainer {
+    width:300px;
+    float:left;
+    height:22px;
+    margin-right:5px;
+}
+
+div.fileselectlabel{
+    margin-right:5px;
+    width:45px;
+    float:left;
+    height:22px;
+    line-height:22px;
+}

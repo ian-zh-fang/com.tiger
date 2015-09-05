@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "QueryAt";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+@section styles{
+    <link type="text/css" href="@Url.Content("~/Content/queryat.css")" rel="stylesheet" />
+    <link type="text/css" href="@Url.Content("~/Content/articlelist.css")" rel="stylesheet" />
+}
+
+@section scripts{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Managerment/queryat.js")"></script>
+}
+
+<div id="querycontrainer"class="nClear">
+    <div id="queryconditioncontrainer">
+        <input id="queryvalue" name="queryvalue" type="text" />
+    </div>
+    <div id="queryatbutton">查&nbsp;&nbsp;&nbsp;&nbsp;询</div>
+</div>
+<hr  style="width:88%; margin:10px auto;" />
+<div id="listcontrainer" style="width:88%; margin:0px auto;"></div>
+<div id="listpagercontrainer">
+    <div id="listcontentmore" title="获取更多信息">
+        <sub>获取更多</sub>
+        <sub style="margin-left:15px;">>>></sub>
+    </div>
+    <div id="listcontentno">
+        <sub>没有更多了</sub>
+    </div>
+</div>
+<div id="dataquerying" class="maskshow" style="width:200px; height:26px; line-height:26px;">请稍等, 正在查询 ... ...</div>
+

@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "首页";
+    Layout = "~/Areas/UI/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts{
+    <script src="@Url.Content("~/Areas/UI/js/home/index.js")"></script>
+}
+
+<div class="fullwidthbanner-container top-shadow">
+    <div class="fullwidthbanner">
+        <ul style="cursor:pointer;"></ul>
+    </div>
+</div>
+
+<div id="contentcontainer" class="container">
+    <div class="sixteen columns">
+        <h4 class="headline"><a href="@Url.Action("ProductAndService")"><strong>产品及服务</strong></a></h4>
+    </div>
+</div>

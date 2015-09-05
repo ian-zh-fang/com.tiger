@@ -1,0 +1,49 @@
+﻿body {
+}
+
+div#querycontrainer{
+    margin-top:35px; 
+    text-align:center;
+}
+
+div#queryconditioncontrainer{
+    width:73%; 
+    float:left;
+}
+
+input[type=text]#queryvalue{
+    height:22px; 
+    width:73%; 
+    max-width:73%; 
+    margin:0px auto; 
+    float:right;
+}
+
+div#queryatbutton{
+    height:26px; 
+    line-height:26px; 
+    font-size:16px; 
+    font-weight:700; 
+    width:100px; 
+    background-color:lightgray;
+    border:1px solid #000; 
+    float:left;
+}
+
+div#queryatbutton:hover{
+    cursor:pointer;
+    background-color:cornflowerblue;
+    color:white;
+}
+
+div.querylistitemcontent {
+    /*width:63%;*/ 
+    /*min-width:53%;*/
+    max-width:63%; 
+    height:22px; 
+    line-height:22px;
+    float:left;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+}

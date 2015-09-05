@@ -1,0 +1,9 @@
+﻿@model companyweb.Models.Article
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+<h2>@Model.Title</h2>
+<hr />
+@(new HtmlString(Model.Contenteditor))

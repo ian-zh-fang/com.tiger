@@ -1,0 +1,13 @@
+﻿
+/*单页面列表样式文件*/
+
+body {
+}
+
+input[type=button] {
+    cursor:pointer;
+    font-size:13px;
+    background-color:cornflowerblue;
+    border-color:cornflowerblue;
+    color:white;
+}

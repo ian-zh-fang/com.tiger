@@ -1,0 +1,31 @@
+﻿body {
+}
+
+.nClear{
+    zoom:1;
+}
+    .nClear:before, .nClear:after {
+        content:"";
+        display:table;
+    }
+    .nClear:after {
+        clear:both;
+    }
+
+.contentlistitemimg {
+    /*border:0px solid red;*/ 
+    width:220px; 
+    height:160px; 
+    float:left;
+    margin-right:5px;
+}
+
+.contentlistitem {
+    /*border:0px solid red;*/ 
+    width:73%; 
+    /*height:160px;*/ 
+    overflow:hidden; 
+    word-wrap:break-word; 
+    word-break:normal; 
+    float:left;
+}

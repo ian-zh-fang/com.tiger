@@ -1,0 +1,36 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@RenderSection("styles", required:false)
+@RenderSection("scripts", required:false)
+@RenderBody()
+
+<div id="maskbg" class="maskbg"></div>
+<script type="text/javascript">
+
+    //  显示遮罩层
+    function maskshow(classid) {
+        if (typeof classid !== 'string')
+            classid = 'maskshow';
+
+        var
+            maskbg = document.getElementsByClassName("maskbg").item(0),
+            maskshow = document.getElementsByClassName(classid).item(0);
+
+        maskbg.style.display = "block";
+        maskshow.style.display = "block";
+    }
+
+    //  隐藏遮罩层
+    function maskhide(classid) {
+        if (typeof classid !== 'string')
+            classid = 'maskshow';
+
+        var
+            maskbg = document.getElementsByClassName("maskbg").item(0),
+            maskshow = document.getElementsByClassName(classid).item(0);
+
+        maskbg.style.display = "none";
+        maskshow.style.display = "none";
+    }
+</script>

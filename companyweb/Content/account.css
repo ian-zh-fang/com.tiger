@@ -1,0 +1,72 @@
+﻿body {
+}
+
+div#formcontrain{
+
+}
+
+div#formcontrain div#formcontent{
+    margin:0px auto;
+    text-align:center;
+    width:600px;
+    border:1px solid lightgray;
+}
+
+fieldset{
+    text-align:center;
+    border-color:#fff;
+    border-width:0px;
+}
+
+fieldset#formhead{
+    border-bottom-width:1px;
+}
+
+fieldset#formmain{
+    /*border-width:1px;*/
+    margin:0 auto;
+    width:300px;
+    min-width:200px;
+    text-align:left;
+    padding:15px;
+}
+
+fieldset#formfooter{
+    border-top-width:0px;
+    margin-top:15px;
+    color:lightgray;
+}
+
+div#formmessage{
+    color:red;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'Microsoft YaHei';
+    font-size:13px;
+    text-align:center;
+    vertical-align:central;
+    margin-top:10px;
+}
+
+input[type=text], input[type=password] {
+    background:transparent;
+    border-color:lightgray;
+    background-color:lightgray;
+    width:200px;
+    min-width:100px;
+}
+
+input[type=submit] {
+    cursor:pointer;
+    margin-left:62px;
+}
+input[type=reset]{
+    cursor:pointer;
+}
+
+div.formitem{
+    margin-top:10px;
+}
+
+div.formitem sub{
+    font-size:16px;
+    margin-right:5px;
+}

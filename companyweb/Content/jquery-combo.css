@@ -1,0 +1,101 @@
+﻿body {
+}
+
+.nClear{
+    zoom:1;
+}
+    .nClear:before, .nClear:after {
+        content:"";
+        display:table;
+    }
+    .nClear:after {
+        clear:both;
+    }
+
+.nComboContrainer {
+
+}
+
+.nComboDataContrainer {
+    float:left;
+    border-bottom:1px solid lightgray;
+    border-top:1px solid lightgray;
+    border-left:1px solid lightgray;
+}
+
+    .nComboDataContrainer:hover {
+        border-color:darkblue;
+        cursor:text;
+    }
+
+.nComboDataValueContrainer {
+    margin:0px auto;
+    text-align:left;
+    width:96%;
+    height:100%;
+    white-space:nowrap;
+    overflow:hidden;
+}
+
+.nComboButtonContrainer {
+    border-bottom:1px solid lightgray;
+    border-top:1px solid lightgray;
+    border-right:1px solid lightgray;
+    float:left;
+    background-color:darkgray;
+    color:white;
+    cursor:pointer;
+    text-align:center;
+}
+
+.nComboResultContrainer{
+    display:none;
+    overflow-x:hidden;
+    overflow-y:auto;
+    border:1px solid lightgray;
+    position:absolute;
+    z-index:100;
+    /*height:200px;*/
+    background-color:#e6e5e6;
+}
+
+.nComboResultItem {
+    font-size:13px;
+    overflow:hidden;
+    height:22px;
+    /*width:98%;*/
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+
+    .nComboResultItem:hover {
+        cursor:pointer;
+        background-color:darkgray;
+        color:white;
+    }
+
+.nComboResultItem sub{
+    font-size:13px;
+    margin-left:15px;
+    height:22px;
+    line-height:22px;
+}
+
+.nComboProcess{
+    display:none;
+    position:absolute;
+    z-index:100;
+    background-color:#e6e5e6;    
+    font-size:14px;
+    height:26px;
+    line-height:26px;
+}
+
+sub.nComboProcessText{
+    margin-left:25px;
+}
+
+sub.nComboProcessState {
+    margin-left:5px;
+    font-size:24px;
+}

@@ -1,0 +1,90 @@
+﻿@using companyweb.Models
+@{
+    ViewBag.Title = "解决方案及案例";
+    Layout = "~/Areas/UI/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts{
+    <script src="@Url.Content("~/Areas/UI/js/home/solutions.js")"></script>
+}
+
+<div class="container">
+    <div class="sixteen columns page-title">
+        <div class="eight columns alpha">
+            <h3> <span>解决方案及案例</span> </h3>
+        </div>
+        <div class="eight columns omega">
+            <nav class="breadcrumbs">
+                <ul>
+                    <li>您的位置:</li>
+                    <li><a href="@Url.Action("Index")"><strong>主页</strong></a></li>
+                    <li>解决方案及案例</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row port works">
+        <div class="row-item eight columns identity">
+            <div class="work">
+                <a href="@Url.Action("PicList", new { cate = Article.MULITMEDIACATEGORY })" class="work-image" target="_blank">
+                    <img src="@Url.Content("~/Areas/UI/images/portfolio/smiling.jpg")" alt="">
+                    <div class="link-overlay fa fa-chevron-right">
+                    </div>
+                </a><strong>MULIT MEDIA</strong>
+                <div class="tags">
+                    多媒体
+                </div>
+            </div>
+        </div>
+
+        <div class="row-item eight columns identity">
+            <div class="work">
+                <a href="@Url.Action("PicList", new { cate = Article.VIRTUALREALITYCATEGORY })" data-gal="" class="work-image" target="_blank">
+                    <img src="@Url.Content("~/Areas/UI/images/portfolio/couple.jpg")" alt="">
+                    <div class="link-overlay fa fa-chevron-right">
+                    </div>
+                </a>
+                <a href="#" class="work-name">VIRTUAL REALITY</a>
+                <div class="tags">
+                    虚拟现实
+                </div>
+            </div>
+        </div>
+
+        <div class="row-item eight columns identity">
+            <div class="work">
+                <a href="@Url.Action("PicList", new { cate = Article.MAPNAVIGATIONCATEGORY })" data-gal="" class="work-image" target="_blank">
+                    <img src="@Url.Content("~/Areas/UI/images/portfolio/beach.jpg")" alt="">
+                    <div class="link-overlay fa fa-chevron-right">
+                    </div>
+                </a><strong>MAP NAVIGATION</strong>
+                <div class="tags">
+                    地图导航
+                </div>
+            </div>
+        </div>
+
+        <div class="row-item eight columns identity">
+            <div class="work">
+                <a href="@Url.Action("PicList", new { cate = Article.SUPPOSITIONALCATEGORY })" data-gal="" class="work-image" target="_blank">
+                    <img src="@Url.Content("~/Areas/UI/images/portfolio/surfing.jpg")" alt="">
+                    <div class="link-overlay fa fa-chevron-right">
+                    </div>
+                </a>
+                <a href="#" class="work-name">SUPPOSITIONAL</a>
+                <div class="tags">
+                    效果图
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+

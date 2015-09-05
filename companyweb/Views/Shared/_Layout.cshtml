@@ -1,0 +1,34 @@
+﻿@{ 
+
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - www.tigerhz.com</title>
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/Size.css")" />
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/jquery-combo.css")" />
+    @RenderSection("styles", required:false)
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.11.3.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jqueryextenion.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/globalvariables.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/globalfuncs.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/regexps.js")"></script>
+    @RenderSection("scripts", required:false)
+</head>
+<body>
+    @RenderBody()
+    <script type="text/javascript">
+
+        var footer = $("footer p"),
+            formfooter = $("fieldset#formfooter");
+
+        if (footer.length > 0)
+            footer.html(_companyname + "<br /><br />" + _copyright);
+        if (formfooter.length > 0)
+            formfooter.html(_copyright);
+    </script>
+</body>
+</html>

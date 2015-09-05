@@ -1,0 +1,21 @@
+﻿@model companyweb.Models.Article
+
+@{
+    ViewBag.Title = "SingleArticles";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+@section styles{
+    <link type="text/css" href="@Url.Content("~/Content/singlecontent.css")" rel="stylesheet" />
+}
+
+@section scripts{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Managerment/singlecontent.js")"></script>
+}
+
+<input type="hidden" id="datacontentcode" value="@Model.Code" />
+<input type="hidden" id="datacontentcate" value="@Model.Category" />
+<input type="hidden" id="datacontenttag" value="@Model.Tag" />
+<input type="button" id="contentbtnedit" value="编辑内容" />
+<hr />
+@(new HtmlString(Model.Contenteditor))

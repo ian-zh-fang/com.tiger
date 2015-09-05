@@ -1,0 +1,117 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+@section styles{
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/managerment.css")" />
+}
+
+@section scripts{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Managerment/index.js")"></script>
+}
+
+
+<div id="bodycontrainer">
+    <div id="bodyhead">
+        <div id="headlogo">
+            <img />
+        </div>
+        <div id="headfunc">
+            <sub>欢迎您：</sub>
+            <sub>管理员</sub>
+            <sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub>
+            <sub>现在时间是：</sub>
+            <sub>@DateTime.Now.ToString("yyyy 年  MM 月  dd日  HH 时  mm 分  ss 秒")</sub>
+            <sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub>
+            <sub>上一次登录时间是：</sub>
+            <sub>@DateTime.Now.AddDays(-1).ToString("yyyy 年  MM 月  dd日  HH 时  mm 分  ss 秒")</sub>
+            @*<sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub>
+            <sub>
+                @Html.ActionLink("新增内容", "Add", "Managerment", new { target = "iframecontent" })
+            </sub>*@
+            <sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub>
+            <sub>
+                @Html.ActionLink("用户", "Userinfo", "Managerment", new { target = "iframecontent" })
+            </sub>
+            <sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub>
+            <sub>
+                @Html.ActionLink("安全退出", "Logout", "Managerment", new { id = "logout" })
+            </sub>
+            <sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub>
+        </div>
+    </div>
+    <div id="bodyfunc">
+        <ul>            
+            <li class="funcitem">
+                <div class="funcnnav">
+                    @Html.ActionLink("关于塔格", "Company", "Managerment", new { target = "iframecontent" })
+                </div>
+                <ul class="funcsub">
+                    <li>
+                        @Html.ActionLink("企业简介", "Introduction", "Managerment", new { target = "iframecontent" })
+                    </li>
+                    <li>
+                        @Html.ActionLink("企业文化", "Culture", "Managerment", new { target = "iframecontent" })
+                    </li>
+                    <li>
+                        @Html.ActionLink("重大事项", "Importments", "Managerment", new { target = "iframecontent" })
+                    </li>
+                    <li>
+                        @Html.ActionLink("联系我们", "Contact", "Managerment", new { target = "iframecontent" })
+                    </li>
+                    <li>
+                        @Html.ActionLink("加入我们", "Joinus", "Managerment", new { target = "iframecontent" })
+                    </li>
+                    
+                </ul>
+            </li>
+            <li class="funcitem">
+                <div class="funcnnav">
+                    @Html.ActionLink("解决方案 & 案例", "Cassess", "Managerment", new { target = "iframecontent" })
+                </div>
+                <ul class="funcsub">
+                    <li>
+                        @Html.ActionLink("多媒体", "Medias", "Managerment", new { target = "iframecontent" })
+                    </li>
+                    <li>
+                        @Html.ActionLink("效果图", "Suppositional", "Managerment", new { target = "iframecontent" })
+                    </li>
+                    <li>
+                        @Html.ActionLink("虚拟现实", "VirtualReality", "Managerment", new { target = "iframecontent" })
+                    </li>
+                    <li>
+                        @Html.ActionLink("地图导航", "MapNavigation", "Managerment", new { target = "iframecontent" })
+                    </li>
+                </ul>
+            </li>
+            <li class="funcitem">
+                <div class="funcnnav">
+                    @Html.ActionLink("产品 & 服务", "Products", "Managerment", new { target = "iframecontent" })
+                </div>
+            </li>
+            <li class="funcitem">
+                <div class="funcnnav">
+                    @Html.ActionLink("内容审核", "AuditeContent", "Managerment", new { target = "iframecontent" })
+                </div>
+            </li>
+            <li class="funcitem">
+                <div class="funcnnav">
+                    @Html.ActionLink("综合查询", "QueryAt", "Managerment", new { target= "iframecontent" })
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="bodysplit"></div>
+    <div id="bodycontent">
+        <iframe src="/Managerment/Company" id="iframecontent" name="iframecontent"></iframe>
+    </div>
+</div>
+
+<div id="footerdiv">
+    <hr style="border:1px groove #eee;" />
+    <footer>
+        <p></p>
+    </footer>
+</div>

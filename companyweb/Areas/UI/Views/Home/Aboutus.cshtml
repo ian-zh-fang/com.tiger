@@ -1,0 +1,117 @@
+﻿
+@{
+    ViewBag.Title = "关于我们";
+    Layout = "~/Areas/UI/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts{
+    <script src="@Url.Content("~/Areas/UI/js/home/aboutus.js")"></script>
+}
+
+<div class="container">
+    <div class="sixteen columns page-title">
+        <div class="eight columns alpha">
+            <h3> <span>关于公司:</span> 信息和文化 </h3>
+        </div>
+        <div class="eight columns omega">
+            <nav class="breadcrumbs">
+                <ul>
+                    <li>您的位置:</li>
+                    <li>
+                        <a href="@Url.Action("Index")">主页</a>
+                    </li>
+                    <li>关于我们</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="eight columns">
+        <div class="">
+            <img class="" src="@Url.Content("~/Areas/UI/images/elements/img-41.jpg")" alt="">
+        </div>
+    </div>
+    <div class="eight columns">
+        <h4 class="headline"><strong>公司简介</strong></h4>
+
+        <p>
+            杭州塔格科技有限公司是提供地理信息相关的真三维模型及图像制作与服务，大力发展地理信息相关的虚拟现实系统开发的公司。公司是一家专业于VR虚拟现实仿真制作，三维模型制作的综合性质服务企业！服务领域包括：工业虚拟模拟，地产虚拟仿真，数字城市建设，城市规划，产品展览展示，军事模型，古迹复原，旅游教学系统虚拟仿真等。<br>
+            合作的客户类型包括GIS,煤矿,房地产,商街商铺，电力等行业，且与国内外大型GIS公司建立了长期稳定的合作关系. 杭州塔格科技有限公司始终坚持以&ldquo;五优质&rdquo;作为公司的发展之本，以优质的管理体系培养出优质的员工，提供优质的服务，产出优质的产品，达到优质的效率。<br>
+            <br>
+            公司有着多年从事虚拟现实方面的经验，一流的三维制作技术，完善的技术服务团队。为您打造最优质的产品。
+        </p>
+    </div>
+    <div class="clearfix"></div>
+    <div class="separator"></div>
+
+    <div class="eight columns">
+        <h4 class="headline"><strong>公司理念</strong></h4>
+        <div class="accordion">
+            <div>
+                杭州塔格科技有限公司英文名：Tiger<br>
+                Technology 技术<br>
+                Image 影像<br>
+                Geography 地理<br>
+                Efficiency 效率<br>
+                Responsibility 责任<br>
+                TIG 技术、影像、地理信息是我们的依托<br>
+                ER 高效、富有责任感是我们的理念
+            </div>
+            <div>
+                <div class="accordion-inner"> </div>
+            </div>
+        </div>
+    </div>
+
+    <h4 class="headline"><strong>重大事项</strong></h4>
+    <div class="clearfix"></div>
+
+    <div class="separator"></div>
+
+    <div class="sixteen columns">
+        <h4 class="headline">
+            <strong>
+                公司展示
+            </strong>            
+        </h4>
+    </div>
+    <div class="team-member four columns">
+        <img class="photo" src="@Url.Content("~/Areas/UI/images/team/team-1.jpg")" alt="Team Member">
+        <div class="content">
+            <h3 class="name">LOGO墙</h3>
+        </div>
+        <div class="tooltips"></div>
+    </div>
+
+    <div class="team-member four columns">
+        <img class="photo" src="@Url.Content("~/Areas/UI/images/team/team-2.jpg")" alt="Team Member">
+        <div class="content">
+            <h3 class="name">拓展训练</h3>
+        </div>
+        <div class="tooltips"></div>
+    </div>
+
+    <div class="team-member four columns">
+        <img class="photo" src="@Url.Content("~/Areas/UI/images/team/team-3.jpg")" alt="Team Member">
+        <div class="content">
+            <h3 class="name">公司活动</h3>
+        </div>
+        <div class="tooltips"></div>
+    </div>
+
+    <div class="team-member four columns">
+        <img class="photo" src="@Url.Content("~/Areas/UI/images/team/team-4.jpg")" alt="Team Member">
+        <div class="content">
+            <h3 class="name">公司年会</h3>
+        </div>
+        <div class="tooltips"></div>
+    </div>
+
+    <div class="clearfix"></div>
+
+</div>
+

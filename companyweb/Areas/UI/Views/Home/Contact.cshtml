@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "联系我们";
+    Layout = "~/Areas/UI/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts{
+    <script src="@Url.Content("~/Areas/UI/js/home/concact.js")"></script>
+}
+
+<div class="container">
+    <div class="sixteen columns page-title">
+        <div class="eight columns alpha">
+            <h3> <span>联系我们</span> </h3>
+        </div>
+        <div class="eight columns omega">
+            <nav class="breadcrumbs">
+                <ul>
+                    <li>您的位置:</li>
+                    <li>
+                        <a href="@Url.Action("Index")">主页</a>
+                    </li>
+                    <li>联系我们</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="four columns sidebar">
+        <h4 class="headline">联系方式</h4>
+        <ul class="list contact">
+            <li class="contact-address"><i class="fa fa-map-marker"></i><span><strong>地址:&nbsp;&nbsp;</strong><br />320010. 杭州市, 西湖区, 翠苑街道, 文三路 259, 昌地·火炬大厦, 1-1301</span></li>
+            <li class="contact-phone"><i class="fa fa-phone"></i><span><strong>电话:</strong><br />+86 (0571) 8649-9866</span></li>
+            <li class="contact-mail"><i class="fa fa-envelope"></i><span><strong>E-mail:</strong><br /><a href="mailto:tiger@tigerhz.com">tiger@tigerhz.com</a></span></li>
+        </ul>
+    </div>
+
+    <div class="four columns sidebar" style="width:72%; float:left;">
+        <h4 class="headline">&nbsp;</h4>
+        <div class="sixteen columns google-map" style="width:63%; float:left;">
+            <div id="map_canvas" class="full-shadow" style="width: 100%; padding-top: 40%;">地图</div>
+            <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+            <script src="@Url.Content("~/Areas/UI/js/jquery.gmap.min.js")"></script>
+            <script type="text/javascript">
+                $(document).ready(function () {
+
+                    try {
+                        $('#map_canvas').gMap({
+                            maptype: 'ROADMAP',
+                            scrollwheel: false,
+                            zoom: 18,
+                            markers: [
+                                {
+                                    address: 'Sidney',
+                                    html: '',
+                                    popup: false,
+                                }
+                            ],
+                        });
+                    }
+                    catch (e) { }
+                });
+            </script>
+        </div>
+    </div>    
+
+    <div class="clearfix"></div>
+</div>

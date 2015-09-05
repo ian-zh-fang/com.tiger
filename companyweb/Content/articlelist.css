@@ -1,0 +1,102 @@
+﻿body {
+}
+
+li{
+    list-style:none;
+}
+
+div#listpagercontrainer{
+    margin-top:25px;
+    text-align:center;
+    vertical-align:central;
+    font-weight:700;
+}
+
+div#listcontentmore {
+    margin:0px auto;
+    display:block;
+    width:160px;
+    height:30px;
+    line-height:30px;
+    border:1px solid lightgray;
+}
+
+div#listcontentmore sub{
+    font-size:16px;
+}
+
+div#listcontentmore:hover{
+    cursor:pointer;
+    background-color:lightslategray;
+    color:white;
+}
+
+div#listcontentno {
+    font-size:18px;
+    display:none;
+    height:30px;
+    line-height:30px;
+    color:lightgray;
+}
+
+input[type=button]:hover {
+    cursor:pointer;
+}
+
+input[type=button]#contentbtnadd {
+    font-size:13px;
+    background-color:cornflowerblue;
+    border-color:cornflowerblue;
+    color:white;
+}
+
+input[type=button]#contentbtndel {
+    font-size:13px;
+    background-color:lightgray;
+    border-color:lightgray;
+}
+
+div.listitemcheck{
+    width:22px;
+    height:22px;
+    line-height:22px;
+    vertical-align:central;
+    float:left;
+}
+
+input[type=checkbox] {
+    margin-top:5px;
+    cursor:pointer;
+}
+
+div.listitem {
+    border-bottom:1px solid lightgray; 
+    margin-top:5px;
+    zoom:1;
+}
+
+    div.listitem:before, div.listitem:after {
+        content: "";
+        display: table;
+    }
+    div.listitem::after{
+        clear:both;
+    }
+
+    div.listitem sub{
+        font-size:14px;
+        height:22px;
+        line-height:22px;
+        margin-left:25px;
+    }
+
+div.listitemcontent{
+    width:63%; 
+    min-width:53%; 
+    height:22px; 
+    line-height:22px;
+    float:left;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+}

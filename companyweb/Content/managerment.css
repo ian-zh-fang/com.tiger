@@ -1,0 +1,119 @@
+﻿body {
+}
+
+div#bodycontrainer{
+    text-align:center;
+    vertical-align:central;
+}
+
+div#bodyhead{
+    border:1px solid lightgray;
+    height:50px;
+    vertical-align:bottom;
+}
+
+div#headlogo {
+    width:235px;
+    height:50px;
+    float:left;
+    text-align:left;
+}
+
+div#headlogo img{    
+    background-image:url(images/logo.png) !important;
+    background-repeat:no-repeat;
+    height:39px;
+    width:140px;
+    margin:5px auto auto 25px;
+}
+
+div#headfunc{
+    float:left;
+    height:20px;
+    line-height:20px;
+    vertical-align:bottom;
+    /*border-bottom:1px solid red;*/
+    text-align:right;
+    margin-top:30px;
+}
+
+div#bodyfunc{
+    border:1px solid lightgray;
+    width:235px;
+    float:left;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+div#bodysplit{
+    width:5px;
+    background-color:lightgray;
+    cursor:col-resize;
+    float:left;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+div#bodycontent{
+    border:1px solid lightgray;
+    float:left;
+}
+
+iframe#iframecontent {
+    border-width:0px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    height:100%;
+    width:100%;
+}
+
+ul {    
+    margin-left:-40px;
+    list-style:none;
+    text-align:left;
+}
+
+ul.funcitem {
+    
+}
+
+div.funcnnav {
+    margin-top:10px;
+    height:26px;
+    line-height:26px;
+    cursor:pointer;
+    border-bottom:2px solid darkgreen;
+}
+
+div.funcnnav:hover{
+
+}
+
+div.funcnnav a{
+    margin-left:25px;
+    font-size:16px;
+}
+
+    ul.funcsub {    
+        margin-top:5px;
+    }
+
+    ul.funcsub li {
+        height:22px;
+        line-height:22px;
+        cursor:pointer;
+        border-bottom:1px solid lightgray;
+    }
+
+    ul.funcsub li:hover{        
+        border-bottom:2px solid red;
+    }
+
+    ul.funcsub li a{
+        margin-left:35px;
+        font-size:12px;
+    }
+
+.funcitemselected{
+    border-bottom:2px solid red;
+}

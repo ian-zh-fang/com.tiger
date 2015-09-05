@@ -1,0 +1,112 @@
+﻿@using companyweb.Controllers
+@model companyweb.Models.Article
+
+@{
+    ViewBag.Title = "新增内容";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+@section styles{
+    <link type="text/css" href="@Url.Content("~/Content/themes/base/all.css")" rel="stylesheet" />
+    <link type="text/css" href="@Url.Content("~/Scripts/uploadify/uploadify.css")" rel="stylesheet" />
+    <link type="text/css" href="@Url.Content("~/Content/addcontent.css")" rel="stylesheet" />
+}
+
+@section scripts{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/uploadify/jquery.uploadify.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/tinymce/tinymce.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Managerment/add.js")"></script>
+}
+
+<div id="formcontrainer">
+    @using (Html.BeginForm(ViewData[ManagermentController.EDITORFORMACTIONNAME].ToString(), "api/service", FormMethod.Post, new { id = "form" }))
+    {
+        <input type="hidden" id="id" name="id" value="@Model.Id" />
+        <input type="hidden" id="code" name="code" value="@Model.Code" />
+        <input type="hidden" id="category" name="category" value="@Model.Category " />
+        <input type="hidden" id="authorcode" name="authorcode" value="@Model.Authorcode " />
+        <input type="hidden" id="author" name="author" value="@Model.Author " />
+        <input type="hidden" id="tag" name="tag" value="@Model.Tag " />
+        <input type="hidden" id="Createtime" name="Createtime" value="@Model.Createtime " />
+        <input type="hidden" id="Updatetime" name="Updatetime" value="@Model.Updatetime " />
+        <input type="hidden" id="Publishtime" name="Publishtime" value="@Model.Publishtime " />
+        <input type="hidden" id="Authorcode" name="Authorcode" value="@Model.Authorcode " />
+        <input type="hidden" id="Author" name="Author" value="@Model.Author " />
+        <input type="hidden" id="Publishstatus" name="Publishstatus" value="@Model.Publishstatus " />
+        <input type="hidden" id="Auditorcode" name="Auditorcode" value="@Model.Auditorcode " />
+        <input type="hidden" id="Auditor" name="Auditor" value="@Model.Auditor " />
+        <input type="hidden" id="Auditortime" name="Auditortime" value="@Model.Auditortime " />
+        <input type="hidden" id="Tickcount" name="Tickcount" value="@Model.Tickcount " />
+        <input type="hidden" id="authenticstatus" name="authenticstatus" value="@Model.Authenticstatus " />
+        <input type="hidden" id="toppictureContent" name="toppictureContent" value="@Model.ToppictureContent " />
+        <input type="hidden" id="thumbnailContent" name="thumbnailContent" value="@Model.ThumbnailContent " />
+        <input type="hidden" id="toppictureName" name="toppictureName" value="@Model.ToppictureName " />
+        <input type="hidden" id="thumbnailName" name="thumbnailName" value="@Model.ThumbnailName " />
+
+        <div id="formhead">
+            <div style="margin-top:25px;"></div>
+            <div>
+                <sub>标&nbsp;&nbsp;&nbsp;&nbsp;题</sub>
+                <input type="text" id="title"  name="title" value="@Model.Title"/>
+            </div>
+            <div class="nClear" style="margin-top:10px; margin-bottom:10px;">
+                <div class="fileselectlabel">缩略图</div>
+                <div id="thumbnailcontrainer" class="fileselectcontrainer" nValue="@Model.Thumbnail" nText="@Model.ThumbnailName"></div>
+                <div class="fileselectlabel">置顶图</div>
+                <div id="toppicturecontrainer" class="fileselectcontrainer" nValue="@Model.Toppicture" nText="@Model.ToppictureName"></div>
+                <div class="fileselectlabel">
+                    <input type="button" id="formimgupload" value="上传" />
+                </div>
+            </div>
+            <div>
+                <input type="checkbox" id="topflag" name="topflag" value="@Model.Topflag" />
+                <label for="topflag">置顶当前内容</label>
+            </div>
+        </div>
+        <div id="formeditor">
+            <textarea id="contenteditor" name="contenteditor">@Model.Contenteditor</textarea>
+        </div>
+
+        <div id="formfooter">
+            <input type="submit" id="formbtnsubmit" value="保存" />
+            <input type="button" id="formbtncancel" value="取&nbsp;&nbsp;消" onclick="javascript: window.history.go(-1);" />
+        </div>
+    }
+</div>
+<input type="hidden" id="articleuniquecode" value="@Model.Code" />
+<input type="hidden" id="articlecategory" value="@Model.Category" />
+<div id="uploadcontrainer" class="maskshow">
+    <div id='uploadofedit' style="margin-top:10px; overflow-x:hidden; overflow-y:auto;">
+        <input type='file' name='tinymceuploadify' id='tinymceuploadify' />
+    </div>  
+    <div id="uploadfooter">
+        <input type="button" id="btnok" onclick="maskhide()" value="确&nbsp;&nbsp;定" />
+        <input type="button" id="btncancel" onclick="maskhide()" value="取&nbsp;&nbsp;消" />
+    </div>
+</div>
+<div id="mediaselcontainer" class="maskshow_another" style="height:auto;">
+    <div id="mediaselheader" class="nClear" style="height:35px; line-height:35px; border-bottom:1px solid #E8E9F7;">
+        <div style="width:75%; float:left; height:35px; line-height:35px; font-size:18px; font-weight:700;">&nbsp;&nbsp;&nbsp;&nbsp;插入/编辑视频</div>
+        <div style="width:35px; height:35px; line-height:35px; cursor:pointer; text-align:center; float:right;" onclick="maskhide('maskshow_another')">X</div>
+    </div>
+    <div>
+        <div class="nClear" style="margin:15px auto 5px 35px; text-align:center;">
+            <div style="width:60px; height:26px; line-height:26px; float:left;">地址</div>
+            <div id="mediasrc" nText="请选择" nValue="0000000000000" nMime="vedio/mp4" style="width:83%; height:26px; line-height:26px; float:left;"></div>
+        </div>
+        <div class="nClear" style="margin:15px auto 5px 35px; text-align:center;">
+            <div style="width:60px; height:26px; line-height:26px; float:left;">大小</div>
+            <div style="width:60px; height:26px; line-height:26px; float:left;">
+                <input type="text" id="mediawidth" style="width:55px;" />
+            </div>
+            <div style="width:30px; height:26px; line-height:26px; float:left;">X</div>
+            <div style="width:60px; height:26px; line-height:26px; float:left;">
+                <input type="text" id="mediaheight" style="width:55px;" />
+            </div>
+        </div>
+    </div>
+    <div id="mediaselfooter" style="height:35px; line-height:35px; margin-top:15px; border-top:1px solid #E8E9F7; text-align:right;">
+        <input type="button" id="mediabtnok" value="确&nbsp;&nbsp;定" />
+        <input type="button" id="mediabtncancel" onclick="maskhide('maskshow_another')" value="取&nbsp;&nbsp;消" />
+    </div>
+</div>

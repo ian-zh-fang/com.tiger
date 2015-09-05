@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section styles{
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/account.css")" />
+}
+@section scripts{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Managerment/login.js")"></script>
+}
+
+<div id="formcontrain">
+    <div id="formcontent">
+        @using (Html.BeginForm("logon", "api/service", FormMethod.Post, new { id = "form"@*, onsubmit="return false;"*@ }))
+        {
+            <fieldset id="formhead">
+                <h2>杭州塔格科技有限公司</h2>
+            </fieldset>
+            <div id="formmessage"></div>
+            <fieldset id="formmain">
+                <div class="formitem">
+                    <sub>登录账户</sub>
+                    <sub><input id="username" name="username" type="text" /></sub>
+                </div>
+                <div class="formitem">
+                    <sub>登录密码</sub>
+                    <sub><input id="password" name="password" type="password" /></sub>
+                </div>
+                <div class="formitem">
+                    <input type="submit" value="登&nbsp;&nbsp;&nbsp;&nbsp;录" />
+                    <input type="reset" value="重&nbsp;&nbsp;&nbsp;&nbsp;置" />
+                </div>
+            </fieldset>
+            <fieldset id="formfooter"></fieldset>
+        }
+    </div>
+</div>
+
