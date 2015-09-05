@@ -269,6 +269,10 @@
     <Content Include="Content\singlecontent.css" />
     <Content Include="Content\Size.css" />
     <Content Include="Global.asax" />
+    <Content Include="PD\DB.pdb" />
+    <Content Include="PD\dbo.Article.sql" />
+    <Content Include="PD\dbo.ArticleFile.sql" />
+    <Content Include="PD\dbo.Userinfo.sql" />
     <Content Include="Scripts\globalfuncs.js" />
     <Content Include="Scripts\Managerment\articlelist.js" />
     <Content Include="Scripts\globalvariables.js" />
@@ -282,6 +286,15 @@
     <Content Include="Areas\UI\Views\Home\Contact.cshtml" />
     <Content Include="Areas\UI\Views\Home\PicList.cshtml" />
     <Content Include="Areas\UI\Views\Home\Detail.cshtml" />
+    <Content Include="PD\com_tiger_companyweb.pjb" />
+    <Content Include="PD\com_tiger_companyweb.prj" />
+    <Content Include="PD\DB.pdm" />
+    <Content Include="PD\ObjectOriented.oob" />
+    <Content Include="PD\ObjectOriented.oom" />
+    <Content Include="PD\process.oob" />
+    <Content Include="PD\process.oom" />
+    <Content Include="PD\UserCase.oob" />
+    <Content Include="PD\UserCase.oom" />
     <None Include="Properties\PublishProfiles\companyweb.pubxml" />
     <None Include="Scripts\jquery-1.11.3.intellisense.js" />
     <Content Include="Scripts\jquery-1.11.3.js" />
